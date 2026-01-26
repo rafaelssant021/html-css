@@ -13,10 +13,19 @@
 <body>
     <h1>teste de formulario</h1>
     <form action="cadastro.php" method="post">
-        <p><label for="iNome">Usuario: </label> 
-            <input type="text" name="usu" id="iNome" required minlength="5"></p>
+        <p>
+            <label for="name">Nome: </label>
+            <input type="text" name="name" id="iname" required maxlength="30" placeholder="nome completo">
+        </p>
+        <p><label for="iusu">Usuario: </label> 
+            <input type="text" name="usu" id="iusu" required minlength="5"></p>
         <p><label for="iSenha">Senha:</label> 
-            <input type="password" name="Senha" id="iSenha" required minlength="8" maxlength="20" size="8" placeholder="minimo 8 letras"></p>
+            <input type="password" name="Senha" id="iSenha" required minlength="8" maxlength="20" size="8" placeholder="minimo 8 letras">
+        </p>
+        <p>
+            <label for="ift">Foto de perfil: </label>
+            <input type="file" name="ft" id="ift">
+        </p>
         <p>
             <label for="imedia">Média: </label>
             <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" required>
@@ -32,6 +41,34 @@
         <p>
             <label for="ihora">Hora da prova: </label>
             <input type="time" name="hora" id="ihora">
+        </p>
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="imasc"> <label for="imasc">Masculino</label>
+            <input type="radio" name="sexo" id="ifem"> <label for="ifem">Feminino</label>
+            <input type="radio" name="sexo" id="ini"> <label for="ini">Prefiro não informar</label>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas">Basquete</label><br>
+            <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Futebol</label><br>
+            <input type="checkbox" name="esvol" id="iesvol"> <label for="iesvol">Volei</label><br>
+            <input type="checkbox" name="esbox" id="iesbox"> <label for="iesbox">Boxe</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Contatos</legend>
+            <p>
+                <label for="imail">E-mail: </label>
+                <input type="email" name="email" id="imail" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="itel">Telefone: </label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx)xxxx-xxxx">
+            </p>
+        </fieldset>
+        <p>
+            <label for="inivel">Nivel de Satisfação: </label>
+            <input type="range" name="nivel" id="inivel" min="1" max="10" value="10">
         </p>
 
 
