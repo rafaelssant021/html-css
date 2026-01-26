@@ -27,6 +27,38 @@
             <input type="file" name="ft" id="ift">
         </p>
         <p>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest">
+                <optgroup label="Região Sudeste">
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="ES">Espirito Santo</option>
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="BA">Bahia</option>
+                    <option value="PI">Piaui</option>
+                    <option value="CE">Ceará</option>
+                    <option value="PE">Pernanbuco</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão: </label>
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+            </datalist>
+        </p>
+        <p>
             <label for="imedia">Média: </label>
             <input type="number" name="media" id="imedia" min="0" max="10" placeholder="0 a 10" step="0.1" required>
         </p>
